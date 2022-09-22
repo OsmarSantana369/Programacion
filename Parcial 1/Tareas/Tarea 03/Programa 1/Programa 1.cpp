@@ -1,5 +1,5 @@
-//Programa
-//Programa que lee 4 n�meros (comprendidos entre 1 y 20) e imprime el n�mero ingresado seguido de tantos asteriscos como indique su valor
+//Tarea 3: Programa 1.
+//Programa que lee cinco números (entre 1 y 30) y por cada número leído, se imprime una línea que contiene dicho número con asteriscos adyacentes
 
 #include<iostream>
 
@@ -8,26 +8,55 @@ using namespace std;
 main()
 {
     setlocale(LC_ALL, "spanish");
-    int x, i=1;
-    cout<<"\t\tPrograma que lee 4 n�meros (comprendidos entre 1 y 20) e imprime el n�mero ingresado seguido de tantos asteriscos como indique su valor\n\n";
-    cout<<"Inserte un n�mero entero comprendido entre 1 y 20: ";
-    cin>>x;
+    int a,b,c,d,e,i;
+    char rep;
+    cout<<"\t\tPrograma que lee cinco números (entre 1 y 30) y por cada número leído, se imprime una línea que contiene dicho número con asteriscos adyacentes\n";
 
-    if((x < 1) || (x > 20))
+    do
     {
-        cout<<"\nError";
-    }
-    else
-    {
-        cout<<"\n"<<x<<" ";
-        while(i <= x)
+        cout<<"\ninserte 5 números enteros del 1 al 30: ";
+        cin>>a>>b>>c>>d>>e;
+        i=1;
+        cout<<"\n"<<a;
+        while (i<=18)
         {
-            cout<<"* ";
+            cout<<" *";
             i++;
         }
-    }
 
-    cout<<"\n\n";
+        cout<<"\n"<<b;
+        while (i<=36)
+        {
+            cout<<" *";
+            i++;
+        }
+
+        cout<<"\n"<<c;
+        while (i<=54)
+        {
+            cout<<" *";
+            i++;
+        }
+
+        cout<<"\n"<<d;
+        while (i<=72)
+        {
+            cout<<" *";
+            i++;
+        }
+
+        cout<<"\n"<<e;
+        while (i<=90)
+        {
+            cout<<" *";
+            i++;
+        }
+
+        cout<<"\n\nsi quiere que el programa se repita inserte 'h', de lo contrario, inserte cualquier otra letra: ";
+
+        cin>>rep;
+    } while ((rep=='h') || (rep=='H'));
+    
 
     return 0;
 }
